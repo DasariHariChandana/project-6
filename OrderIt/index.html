@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div  class="open" id="sectioncontainer">
+        <div class="form-box">
+            <h1 id="title">Login Details</h1>
+            <form> 
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p>forgot password?<a href='#'> Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn"  onclick="display('sectionfront')">Sign up</button>
+                    <button type="button" id="signinBtn"class="disable" onclick="display('sectionfront')">Sign in</button>
+                </div>
+            </form>
+        </div> 
+    </div>
+    <div class="main" id="sectionfront">
+        <div class="bj-container ">
+            <div class="card-container">
+                <p class="para" id="special">WELCOME TO THE GRAND RESTAURANT</p>
+                <p class="para">Enjoy the Delicious Food</p>
+                <button class="click" onclick="display('sectionmenu')">Menu</button>
+                <button class="click" onclick="display('sectioncontainer')">Back</button>
+            </div> 
+        </div>
+   </div>
+   <div class="menu-section" id="sectionmenu">
+       <div class="menu-bg-container">
+            <div class="menu-container d-flex flex-column justify-content-center">
+                <h1>WELCOME TO THE MENU</h1>
+                <h2>Find your best choice</h2>
+            </div>
+            <div class="items d-flex flex-column justify-content-center">
+                <h3>List of Items</h3>
+                <div class="list d-flex flex-row ">
+                    <p class="sub-list">Soups</p>
+                    <button class="btn btn-primary" onclick="display('sectionsoup')">Show</button>
+                </div>
+                <div class="list d-flex flex-row ">
+                    <p class="sub-list">Starters</p>
+                    <button class="btn btn-primary" onclick="display('sectionstarter')">Show</button>
+                </div>
+                <div class="list d-flex flex-row">
+                    <p class="sub-list">Biryani's</p>
+                    <button class="btn btn-primary" onclick="display('sectionbiryani')">Show</button>
+                </div>
+                <div class="list d-flex flex-row ">
+                    <p class="sub-list">Desserts</p>
+                    <button class="btn btn-primary" onclick="display('sectiondessert')">Show</button>
+                </div>
+            </div> 
+            <button class="click" onclick="display('sectionfront')">Back</button>
+        </div>
+    </div>
+    <div class="sub-section" id="sectionsoup">
+        <h1 class="heading d-flex flex-row justify-content-center">soups</h1>
+        <i class="fa-sharp fa-solid fa-arrow-left"></i>
+        <div class="pro-container d-flex flex-row">
+            <div class="product">
+                <img src="soup1.jpg" alt="">
+                <div class="para-cont">
+                   <p>Veg Manchow Soup</p>
+                   <p>Prize:Rs.130</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="soup2.jpg" alt="">
+                <div class="para-cont">
+                   <p>sweet corn Soup</p>
+                   <p>Prize:Rs.120</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="soup3.jpg" alt="">
+                <div class="para-cont">
+                   <p>chicken Manchow Soup</p>
+                   <p>Prize:Rs.150</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="soup4.jpg" alt="">
+                <div class="para-cont">
+                   <p>Mutton Soup</p>
+                   <p>Prize:Rs.200</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+        </div> 
+        <button class="click" onclick="display('sectionmenu')">Back</button>
+    </div>
+    <div class="sub-section" id="sectionstarter">
+        <h1 class="heading d-flex flex-row justify-content-center">Starters</h1>
+        <div class="pro-container d-flex flex-row">
+            <div class="product">
+                <img src="starter1.jpg" alt="">
+                <div class="para-cont">
+                    <p>Gobi Manchurian</p>
+                    <p>Prize:Rs.150</p>
+                    <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="starter2.jpg" alt="">
+                <div class="para-cont">
+                   <p>Chilli Mushroom</p>
+                   <p>Prize:Rs.170</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="starter3.jpg" alt="">
+                <div class="para-cont">
+                   <p>Chilli Chicken </p>
+                   <p>Prize:Rs.220</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="starter4.jpg" alt="">
+                <div class="para-cont">
+                   <p>Apollo Fish</p>
+                   <p>Prize:Rs.250</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+        </div> 
+        <button class="click" onclick="display('sectionmenu')">Back</button>
+    </div>
+    <div class="sub-section" id="sectionbiryani">
+        <h1 class="heading d-flex flex-row justify-content-center">Biryani's</h1>
+        <div class="pro-container d-flex flex-row">
+            <div class="product">
+                <img src="biryani1.jpg" alt="">
+                <div class="para-cont">
+                   <p>Kaju Biryani</p>
+                   <p>Prize:Rs.250</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="biryani2.jpg" alt="">
+                <div class="para-cont">
+                   <p>Panneer Biryani</p>
+                   <p>Prize:Rs.230</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="biryani3.jpg" alt="">
+                <div class="para-cont">
+                   <p>Chicken 65 biryani</p>
+                   <p>Prize:Rs.270</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="biryani4.jpg" alt="">
+                <div class="para-cont">
+                   <p>Mutton Biryani</p>
+                   <p>Prize:Rs.320</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+        </div> 
+        <button class="click" onclick="display('sectionmenu')">Back</button>
+    </div>
+    <div class="sub-section" id="sectiondessert">
+        <h1 class="heading d-flex flex-row justify-content-center">Desserts</h1>
+        <div class="pro-container d-flex flex-row">
+            <div class="product">
+                <img src="dessert1.jpg" alt="">
+                <div class="para-cont">
+                   <p>Choco Lava Cake with Icrecream</p>
+                   <p>Prize:Rs.250</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="dessert2.jpg" alt="">
+                <div class="para-cont">
+                   <p>Brownie</p>
+                   <p>Prize:Rs.220</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="dessert3.jpg" alt="">
+                <div class="para-cont">
+                   <p>Butterscotch Icecream</p>
+                   <p>Prize:Rs.200</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="dessert4.jpg" alt="">
+                <div class="para-cont">
+                   <p>Chocolate Icecream</p>
+                   <p>Prize:Rs.200</p>
+                   <button class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+        </div> 
+        <button class="click" onclick="display('sectionmenu')">Back</button>
+    </div>
+    
+    
+
+<script type="text/javascript" src="https://new-assets.ccbp.in/frontend/content/static-ccbp-ui-kit/static-ccbp-ui-kit.js"></script>
+</body>
+</html>
